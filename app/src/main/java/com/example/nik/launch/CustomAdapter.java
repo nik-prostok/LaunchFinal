@@ -16,10 +16,11 @@ import java.util.HashMap;
  * Created by Nik on 19.02.2018.
  */
 
+
 public class CustomAdapter extends BaseExpandableListAdapter {
 
     private Context c;
-    private ArrayList<Rocket> rockets;
+    private static ArrayList<Rocket> rockets;
     private LayoutInflater inflater;
 
     HashMap<ImageView, String> imgMap1 = new HashMap<>();
@@ -88,7 +89,6 @@ public class CustomAdapter extends BaseExpandableListAdapter {
             new DownloadImageTask(img).execute(rockets.get(i).getChild(4));
             return view;
         }
-
         return view;
     }
 
